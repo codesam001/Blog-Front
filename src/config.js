@@ -2,7 +2,7 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-    baseURL : "https://blog-frontend-rref.onrender.com/api/"
+    baseURL : "https://blog-backend-e3mw.onrender.com/api/"
 })
 
 
