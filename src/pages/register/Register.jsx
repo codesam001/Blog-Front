@@ -9,6 +9,7 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);
@@ -23,6 +24,8 @@ export default function Register() {
       setError(true);
     }
   };
+
+  
   return (
     <div className="register">
       <span className="registerTitle">Register</span>
