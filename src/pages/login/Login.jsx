@@ -1,7 +1,7 @@
 
 import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
-import { axiosInstance } from "../../config";
+import axiosInstance from "../../config";
 import { Context } from "../../context/Context";
 import "./login.css";
 
