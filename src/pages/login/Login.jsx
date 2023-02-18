@@ -1,8 +1,7 @@
 
-import axios from "axios";
 import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
-// import { axiosInstance } from "../../config";
+import { axiosInstance } from "../../config";
 import { Context } from "../../context/Context";
 import "./login.css";
 
@@ -16,7 +15,7 @@ export default function Login() {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("https://blog-backend-e3mw.onrender.com/api/auth/login", {
+      const res = await axiosInstance.post("/auth/login", {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });
