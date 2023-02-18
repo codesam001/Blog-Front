@@ -2,7 +2,9 @@ import "./settings.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
-import axiosInstance from "../../config";
+import axios from "axios";
+
+
 
 
 export default function Settings() {
@@ -31,11 +33,11 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axiosInstance.post("/upload", data);
+        await axios.post("https://blog-backend-e3mw.onrender.com/upload", data);
       } catch (err) {}
     }
     try {
-      const res = await axiosInstance.put("/users/" + user._id, updatedUser);
+      const res = await axios.put("https://blog-backend-e3mw.onrender.com/users/" + user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (err) {

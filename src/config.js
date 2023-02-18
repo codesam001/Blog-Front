@@ -5,11 +5,13 @@ import axios from "axios"
 //     baseURL : "https://blog-backend-e3mw.onrender.com/api/"
 // })
 
+ 
+
+
 
 
 export const axiosInstance = axios.create({
-    baseURL: 'https://blog-backend-e3mw.onrender.com/api/'
-   
+    baseURL: 'https://localhost:5000/api/'
   });
 
 
