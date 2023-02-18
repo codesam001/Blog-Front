@@ -7,13 +7,13 @@ import axios from "axios"
 
 
 
-const axiosInstance = axios.create({
-    baseURL: 'https://blog-backend-e3mw.onrender.com/api/',
+export const axiosInstance = axios.create({
+    baseURL: 'https://blog-backend-e3mw.onrender.com/api/'
    
   });
 
 
-  export default axiosInstance;
+  // export default axiosInstance;
 
 
 
